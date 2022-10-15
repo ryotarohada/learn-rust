@@ -48,5 +48,19 @@ pub fn run() {
 
   let a1 = [1, 2, 3, 4, 5];
   let a2 = [0; 10];
-  println!("{:?} {:?} {} {}", a1, a2, a1[2], a1[3])
+  println!("{:?} {:?} {} {}", a1, a2, a1[2], a1[3]);
+
+  let s1 = "helloこんにちは挨拶";
+  let s2 = "hello";
+  println!("Stack address of s1 is: {:p}", &s1);
+  println!("Stack address of s2 is: {:p}", &s2);
+  println!("Static address of s1 is: {:?}", &s1.as_ptr());
+  println!("Static address of s2 is: {:?}", &s2.as_ptr());
+
+  let mut s1 = String::from("hello");
+  let mut s2 = String::from("helloworld");
+  println!("Stack address of s1 is: {:p}", &s1);
+  println!("Stack address of s2 is: {:p}", &s2);
+
 }
+
